@@ -77,3 +77,24 @@ car-connect
 │   │   ├── application.properties
 │   │   └── static
 └── pom.xml
+
+## Design Patterns Implementation
+
+This project demonstrates 7 design patterns inside the existing Car Connect Spring Boot application.
+
+### Used Patterns
+
+| Category | Pattern | Classes |
+|---|---|---|
+| Creational | Builder | RentalCar, RentalCarBuilder |
+| Creational | Factory | CarFactory, CarType, SuvCar, EconomyCar |
+| Structural | Adapter | ExternalPaymentApi, PaymentAdapter |
+| Structural | Decorator | RentalService, BasicRentalService, InsuranceDecorator |
+| Structural | Facade | RentalFacade |
+| Behavioral | Strategy | PaymentStrategy, CardPaymentStrategy, CashPaymentStrategy |
+| Behavioral | Observer | NotificationPublisher, NotificationObserver, EmailObserver, SmsObserver |
+
+### Demo Endpoint
+
+```text
+GET http://localhost:2020/patterns/demo
